@@ -54,6 +54,16 @@
 	window.alert("Tu mensaje fue enviado al perro chistoso!");
     }
 </script>       
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->                 
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 
+<script>
+	var socket = io();
+	socket.emit('happy',{
+		reason:'cryptography is a cool course!'
+	});
+	socket.on('serverMsg',function(data){
+		console.log(data.msg); 
+	});
+</script>
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 	
 </body>
 </html>
