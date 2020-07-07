@@ -55,10 +55,12 @@
     }
 </script>       
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-  <form method="post test" action="/post">
-   <p><label>texto: <input name="texto"></label></p>
-   <p><button>Submit order</button></p>
-  </form>
+<script language="javascript"> 
+
+   function DoPost(){
+      $.post("https://httpbin.org/post", { name: "John", time: "2pm" } );  //Your values here..
+   }
+</script>
 </body>
 </html>
 
