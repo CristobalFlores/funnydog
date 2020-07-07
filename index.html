@@ -55,12 +55,19 @@
     }
 </script>       
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-<script language="javascript"> 
-
-   function DoPost(){
-      $.post("https://httpbin.org/post", { name: "John", time: "2pm" } );  //Your values here..
-   }
-</script>
+<form action="https://www.foo.com" method="POST">
+  <div>
+    <label for="say">What greeting do you want to say?</label>
+    <input name="say" id="say" value="Hi">
+  </div>
+  <div>
+    <label for="to">Who do you want to say it to?</label>
+    <input name="to" id="to" value="Mom">
+  </div>
+  <div>
+    <button>Send my greetings</button>
+  </div>
+</form>	
 </body>
 </html>
 
