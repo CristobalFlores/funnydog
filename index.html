@@ -24,14 +24,17 @@
 <body background="perro.jpg">             
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 
 <h1><p style="font-family:Comic Sans MS">Manda tu mensaje al perro chistoso!!!1!</p></h1>
-<FORM ACTION="post.php" METHOD=POST>	
+<?php
+pre_r($POST);
+?>	
+<FORM ACTION="" METHOD="POST">	
 <fieldset>
 <label>nombre: </label>
-<input type = "text" 
+<p><input type = "text" 
        id = "txtName" 
 	   placeholder = "ingrese nombre ..."/>
 <label>texto: </label>	   
-<input type = "text"
+<p><input type = "text"
        id = "txtOutput"
        placeholder = "ingrese palabra ..."/>
 <input type = "button"                   
@@ -59,3 +62,10 @@
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 
 </body>
 </html>
+
+<?php
+function pre_r ($array){
+	echo "<pre>";
+	print_r($array)
+	echo "<pre>";
+}?>
