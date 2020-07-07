@@ -24,6 +24,7 @@
 <body background="perro.jpg">             
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 
 <h1><p style="font-family:Comic Sans MS">Manda tu mensaje al perro chistoso!!!1!</p></h1>
+<FORM ACTION="get.html" METHOD=POST>	
 <fieldset>
 <label>nombre: </label>
 <input type = "text" 
@@ -37,6 +38,7 @@
        value = "click me"
        onClick = "sayHi()"/>	   
 </fieldset>  
+</FORM>	
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->    
 <script type = "text/javascript">
     function sayHi(){
@@ -55,15 +57,5 @@
     }
 </script>       
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 
-<script>
-	var socket = io();
-	socket.emit('happy',{
-		reason:'cryptography is a cool course!'
-	});
-	socket.on('serverMsg',function(data){
-		console.log(data.msg); 
-	});
-</script>
-<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%--> 	
 </body>
 </html>
